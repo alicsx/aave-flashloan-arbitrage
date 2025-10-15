@@ -7,7 +7,8 @@ import "../interfaces/aave/ILendingPoolAddressesProvider.sol";
 import "../interfaces/aave/ILendingPool.sol";
 import "../interfaces/IUniswapV2Router02.sol";
 import "../interfaces/IERC20.sol";
-
+import "@openzeppelin/contracts/math/SafeMath.sol";
+using SafeMath for uint256;
 contract FlashLoanArbitrage is FlashLoanReceiverBase {
     //--------------------------------------------------------------------
     // VARIABLES
