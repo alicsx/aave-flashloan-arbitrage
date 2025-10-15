@@ -65,7 +65,7 @@ contract FlashLoanArbitrage is FlashLoanReceiverBase {
     function withdraw(uint256 amount) public onlyOwner {
         uint256 wethBalance = getERC20Balance(wethAddress);
         require(amount <= wethBalance, "Not enough amount deposited");
-        IERC20(wethAddress).transferFrom(address(this), msg.sender, amount);
+        IERC20(wethAddress).transfer(msg.sender, amount);
     }
 
     function makeArbitrage() public {
