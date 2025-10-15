@@ -3,8 +3,8 @@
 pragma solidity ^0.6.6;
 
 import "./aave/FlashLoanReceiverBase.sol";
-import "../../interfaces/aave/ILendingPoolAddressesProvider.sol";
-import "../../interfaces/aave/ILendingPool.sol";
+import "../interfaces/aave/ILendingPoolAddressesProvider.sol";
+import "../interfaces/aave/ILendingPool.sol";
 import "../interfaces/IUniswapV2Router02.sol";
 import "../interfaces/IERC20.sol";
 
