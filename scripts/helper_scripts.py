@@ -25,8 +25,8 @@ def fromWei(amount):
 
 
 def get_contract(_contract, contract_address):
-    contract = Contract.from_abi(_contract._name, contract_address, _contract.abi)
-
+    return Contract.from_abi(_contract._name, contract_address, _contract.abi)
+    
 def approve_erc20(erc20_address, spender, amount, account):
     erc20 = interface.IERC20(erc20_address)
     approve_tx = erc20.approve(spender, amount, {"from": account})
